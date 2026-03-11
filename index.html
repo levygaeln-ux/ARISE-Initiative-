@@ -23,6 +23,37 @@
     footer a { color:#F59E0B; text-decoration:none; margin:0 10px; }
     .values-list { list-style:none; padding:0; }
     .values-list li { margin-bottom:10px; }
+
+    /* Debate Gallery styles */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .gallery-logo {
+      grid-column: span 2; /* makes the logo stand out */
+      justify-self: center;
+      max-width: 150px;
+    }
+
+    /* Responsive tweak for mobile */
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .gallery-logo {
+        grid-column: span 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -34,6 +65,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#programmes">Programmes</a>
+    <a href="#debate-gallery">Debate</a>
     <a href="#impact">Impact</a>
     <a href="#values">Values</a>
     <a href="#contact">Contact</a>
@@ -57,6 +89,20 @@
     <li><strong>Tech & Digital Literacy (Upcoming)</strong> — Preparing youth with essential digital skills for the modern world.</li>
   </ul>
 </section>
+ 
+<!-- Debate Gallery -->
+<section id="debate-gallery">
+  <h2>Debate Highlights</h2>
+  <p>Snapshots from our interschool debate championship and advocacy sessions:</p>
+  <div class="gallery">
+    <img src="assets/images/logo.png" alt="ARISE Logo" class="gallery-logo">
+    <img src="assets/images/debate1.jpg" alt="Debate photo 1">
+    <img src="assets/images/debate2.jpg" alt="Debate photo 2">
+    <img src="assets/images/debate3.jpg" alt="Debate photo 3">
+    <img src="assets/images/debate4.jpg" alt="Debate photo 3">
+    <!-- Add more photos as needed -->
+  </div>
+</section> 
 
 <!-- Impact / Partners -->
 <section id="impact">
@@ -95,4 +141,3 @@
 
 </body>
 </html>
-
